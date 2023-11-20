@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: HollyShit
+  m_EditorClassIdentifier: 
+  skillName: HollyShit
+  skillATK: 10
+  skillSpeed: 10
+  skillDuration: 5
+  skillCoolTime: 100
+  skillSFX: []
+  description: "\uC77C\uC2DC\uC801\uC73C\uB85C \uB9C8\uB825\uC758 \uAC15\uB825\uD55C
+    \uBCF4\uD638\uB97C \uBC1B\uC2B5\uB2C8\uB2E4. \uAC15\uD55C \uB9C8\uB825\uC774
+    \uBC1B\uB294 \uBAA8\uB4E0 \uB370\uBBF8\uC9C0\uB97C \uD761\uC218\uD558\uC5EC \uB9C8\uBC95\uC0AC\uB97C
+    \uBCF4\uD638\uD569\uB2C8\uB2E4.\r\n\u201D\uC2E0\uC131\uD55C \uBE5B\uC73C\uB85C!\u201D"
+  skillSprite: {fileID: 21300000, guid: 780b1cc27662c53459b6a009f1144c89, type: 3}

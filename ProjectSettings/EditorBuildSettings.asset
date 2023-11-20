@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/01.Scenes/TitleScene.unity
+    guid: 1d0e5139b502778489eb524489a75add
+  - enabled: 1
+    path: Assets/01.Scenes/CreateRoom.unity
+    guid: 973ee4b4368b90a42bce6c3d129e0708
+  - enabled: 1
+    path: Assets/01.Scenes/GameScene.unity
+    guid: 4471e7cb94d199b4f9cfa9ecabb84903
+  - enabled: 1
+    path: Assets/01.Scenes/RoomScene.unity
+    guid: 34c5d4ca4acb75546b7ad41505c4aaf0
+  - enabled: 1
+    path: Assets/01.Scenes/LoadingScene.unity
+    guid: 9a1dbd4d28811a449b8162b283e14188
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 96d412dbe9538984985e65a0b3dfd1be, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ea40a2bed0c31f4439942bd55457dd88, type: 2}

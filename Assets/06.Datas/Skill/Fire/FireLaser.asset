@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: FireLaser
+  m_EditorClassIdentifier: 
+  skillName: FireLaser
+  skillATK: 0.1
+  skillSpeed: 0
+  skillDuration: 4
+  skillCoolTime: 10
+  skillSFX:
+  - {fileID: 8300000, guid: b3a529be6a6e30f44b9d5e421e78465b, type: 3}
+  description: "\uC815\uC2E0\uC744 \uC9D1\uC911\uD558\uC5EC \uC6D0\uC18C\uB97C \uC81C\uC5B4\uD569\uB2C8\uB2E4.
+    \uC81C\uC5B4\uB41C \uC6D0\uC18C\uB294 \uB9C8\uBC95\uC0AC\uC5D0\uAC8C\uC11C \uC9C1\uC120\uC73C\uB85C
+    \uB098\uC544\uAC00 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+  skillSprite: {fileID: 21300000, guid: 1c6b10d89381b7147ad935fb8a206dab, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: FinishSkill
+  m_EditorClassIdentifier: 
+  skillName: Finish
+  skillATK: 80
+  skillSpeed: 0
+  skillDuration: 2
+  skillCoolTime: 0
+  skillSFX:
+  - {fileID: 0}
+  description: "\uBE5B\uC744 \uC81C\uC5B4\uD558\uC5EC \uC77C\uC9C1\uC120\uC0C1\uC5D0
+    \uC788\uB294 \uB300\uC0C1\uC5D0\uAC8C \uD070 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4.
+    \uC2DC\uC804\uD558\uB294 \uB3D9\uC548 \uC6C0\uC9C1\uC77C \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.\r\n\u201D\uB9C8\uC9C0\uB9C9\uC774\uB2E4!\u201D"
+  skillSprite: {fileID: 21300000, guid: 04a7e39ab4ccf8a448dc012eead36317, type: 3}

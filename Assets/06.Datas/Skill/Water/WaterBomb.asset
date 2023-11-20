@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: WaterBomb
+  m_EditorClassIdentifier: 
+  skillName: WaterBomb
+  skillATK: 30
+  skillSpeed: 3
+  skillDuration: 8
+  skillCoolTime: 9
+  skillSFX:
+  - {fileID: 8300000, guid: 39deb526d2e9a3946935cc799b3841b0, type: 3}
+  description: "\uC791\uC740 \uBB3C\uC758 \uAD6C\uCCB4\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4.
+    \uAD6C\uCCB4\uB294 \uD3EC\uBB3C\uC120\uC73C\uB85C \uC6C0\uC9C1\uC774\uBA70 \uC8FC\uBCC0\uC758
+    \uC218\uC99D\uAE30\uB97C \uD761\uC218\uD574 \uC810\uC810 \uCEE4\uC9D1\uB2C8\uB2E4."
+  skillSprite: {fileID: 21300000, guid: 1d894e56d50287648b025f6b99d6d283, type: 3}

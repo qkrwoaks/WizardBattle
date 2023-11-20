@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: FireBall
+  m_EditorClassIdentifier: 
+  skillName: FireBall
+  skillATK: 15
+  skillSpeed: 50
+  skillDuration: 10
+  skillCoolTime: 4
+  skillSFX:
+  - {fileID: 8300000, guid: 6dce89cb3f5957142be9fa693d073e5a, type: 3}
+  description: "\uBD88\uD0C0\uB294 \uAD6C\uCCB4\uB97C \uC18C\uD658\uD569\uB2C8\uB2E4.
+    \uAD6C\uCCB4\uB294 \uC0C1\uB300 \uD50C\uB808\uC774\uC5B4\uC5D0\uAC8C \uC9C1\uC120\uC73C\uB85C
+    \uB0A0\uB77C\uAC00 \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
+  skillSprite: {fileID: 21300000, guid: 27eae8d4514d9794296f20066a21a297, type: 3}

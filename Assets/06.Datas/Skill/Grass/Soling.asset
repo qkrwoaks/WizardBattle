@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: Soling
+  m_EditorClassIdentifier: 
+  skillName: Soling
+  skillATK: 5
+  skillSpeed: 1
+  skillDuration: 10
+  skillCoolTime: 9
+  skillSFX:
+  - {fileID: 8300000, guid: d6cfd7863ce68414d86a7b57973a8389, type: 3}
+  description: "\uC791\uC740 \uC815\uB839 \uC138 \uBA85\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4.
+    \uC815\uB839\uC740 \uC0C1\uB300\uB97C \uCD94\uC801\uD574 \uACF5\uACA9\uD569\uB2C8\uB2E4."
+  skillSprite: {fileID: 21300000, guid: 14be406353d62ec49a7cce288f21677c, type: 3}

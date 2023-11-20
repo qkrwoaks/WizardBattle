@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: EarthQuake
+  m_EditorClassIdentifier: 
+  skillName: EarthQuake
+  skillATK: 10
+  skillSpeed: 10
+  skillDuration: 5
+  skillCoolTime: 100
+  skillSFX: []
+  description: "\uB545\uC758 \uB9C8\uB825\uC744 \uAC15\uD0C0\uD574 \uC801\uC758 \uC9C0\uC5ED\uC744
+    \uD754\uB4ED\uB2C8\uB2E4. \uC801\uC758 \uC2DC\uC57C\uAC00 \uC77C\uC815\uC2DC\uAC04
+    \uB3D9\uC548 \uD754\uB4E4\uB9BD\uB2C8\uB2E4.\r\n\u201D\uC6C0\uC9C1\uC5EC\uB77C,
+    \uD754\uB4E4\uB824\uB77C!\u201D * \uD734\uC720\uC99D\uC774 \uB0A8\uC2B5\uB2C8\uB2E4!"
+  skillSprite: {fileID: 21300000, guid: 69a0d09197f87e445b4a2badbe3fcfa4, type: 3}

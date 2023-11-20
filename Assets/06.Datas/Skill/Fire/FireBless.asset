@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c14098f7ed1148ae9000a59fb0477, type: 3}
+  m_Name: FireBless
+  m_EditorClassIdentifier: 
+  skillName: FireBless
+  skillATK: 0
+  skillSpeed: 0
+  skillDuration: 0
+  skillCoolTime: 0
+  skillSFX:
+  - {fileID: 8300000, guid: 525e98d0fa8894444902b0e4be306c26, type: 3}
+  description: "\uB9C8\uBC95\uC0AC\uC758 \uCCB4\uB825\uC774 \uC77C\uC815 \uC218\uC900
+    \uC774\uD558\uB85C \uB5A8\uC5B4\uC9C0\uBA74 \uC5F4\uAE30\uC758 \uCD95\uBCF5\uC744
+    \uBC1B\uC544 \uACF5\uACA9\uB825\uC774 \uC77C\uC815\uB7C9 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  skillSprite: {fileID: 21300000, guid: 10741e47097628542ac7e0ab1b8cf82c, type: 3}
