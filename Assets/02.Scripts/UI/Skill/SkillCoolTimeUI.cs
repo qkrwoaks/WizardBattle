@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ public class SkillCoolTimeUI : MonoBehaviour
     [SerializeField] private Image playerImg;
     [SerializeField] private Image playerImgT;      // 테두리 이미지
 
+    [SerializeField] private PhotonView PV;
+
     private float[] time_start = { 0, 0 };
     public bool[] isEnded = { true, true };
 
@@ -15,7 +18,7 @@ public class SkillCoolTimeUI : MonoBehaviour
 
     private void Awake()
     {
-        if (PCVRSetting.isVR)
+        if (PCVRSetting.isVR && PV.IsMine)
         {
             GameSystem.Instance.skillCoolTimeUI = this;
         }

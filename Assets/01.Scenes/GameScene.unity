@@ -969,7 +969,7 @@ PrefabInstance:
       objectReference: {fileID: 2120533354}
     - target: {fileID: 4827475818831869071, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectUtilSkillBtnClick
+      value: SelectSkillBtnClick
       objectReference: {fileID: 0}
     - target: {fileID: 4827475818929322854, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1273,7 +1273,7 @@ PrefabInstance:
       objectReference: {fileID: 2120533354}
     - target: {fileID: 4827475819441911700, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectUtilSkillBtnClick
+      value: SelectSkillBtnClick
       objectReference: {fileID: 0}
     - target: {fileID: 4827475819464171739, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1341,7 +1341,7 @@ PrefabInstance:
       objectReference: {fileID: 2120533354}
     - target: {fileID: 4827475819763716529, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectUtilSkillBtnClick
+      value: SelectSkillBtnClick
       objectReference: {fileID: 0}
     - target: {fileID: 4827475819792169933, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: wizzardObjects.Array.size
@@ -1489,7 +1489,7 @@ PrefabInstance:
       objectReference: {fileID: 2120533354}
     - target: {fileID: 4827475820445201031, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectUtilSkillBtnClick
+      value: SelectSkillBtnClick
       objectReference: {fileID: 0}
     - target: {fileID: 9046463307286355951, guid: 7da669c60d7d81a4599b7aa7fe5ddc6c, type: 3}
       propertyPath: m_IsActive

@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 9036894953379524883}
+  m_ModelPrefab: {fileID: 4000013701584382, guid: 0bb6bfc698d3ed247809e5bdb4389d6d, type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -2090,11 +2090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &9036894953379524883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3080454621016398932, guid: edb1eb1ed673d214b9d22f4baf6434a0, type: 3}
-  m_PrefabInstance: {fileID: 6329379627216170311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9040585479376883311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3071707441138770728, guid: edb1eb1ed673d214b9d22f4baf6434a0, type: 3}

@@ -1164,6 +1164,7 @@ MonoBehaviour:
   - {fileID: 7768575860190245488}
   playerImg: {fileID: 3705367119638346891}
   playerImgT: {fileID: 256970656065641492}
+  PV: {fileID: 0}
   isEnded: 0101
 --- !u!1 &256970656601418950
 GameObject:
