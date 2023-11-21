@@ -8,26 +8,65 @@ using TMPro;
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
     [Header("Lobby UI")]
-    [SerializeField]
     private TMP_InputField roomNameInput;
-    [SerializeField]
+    [SerializeField] private TMP_InputField pcRoomNameInput;
+    [SerializeField] private TMP_InputField vrRoomNameInput;
     private TMP_InputField passwordInput;
-    [SerializeField]
+    [SerializeField] private TMP_InputField pcPasswordInput;
+    [SerializeField] private TMP_InputField vrPasswordInput;
     private TMP_InputField passwordCheckInput;
-    [SerializeField]
+    [SerializeField] private TMP_InputField pcPasswordCheckInput;
+    [SerializeField] private TMP_InputField vrPasswordCheckInput;
     private Toggle privateRoomToggle;
-    [SerializeField]
+    [SerializeField] private Toggle pcPrivateRoomToggle;
+    [SerializeField] private Toggle vrPrivateRoomToggle;
     private Button[] cellBtn;
-    [SerializeField]
+    [SerializeField] private Button[] pcCellBtn;
+    [SerializeField] private Button[] vrCellBtn;
     private Button PreviousBtn;
-    [SerializeField]
+    [SerializeField] private Button pcPreviousBtn;
+    [SerializeField] private Button vrPreviousBtn;
     private Button NextBtn;
-    [SerializeField]
+    [SerializeField] private Button pcNextBtn;
+    [SerializeField] private Button vrNextBtn;
     private GameObject passwordInputPanel;
+    [SerializeField] private GameObject pcPasswordInputPanel;
+    [SerializeField] private GameObject vrPasswordInputPanel;
 
     private List<RoomInfo> myList = new List<RoomInfo>();
     private int currentPage = 1, maxPage, multiple;
-    private string[] currentRoomName; 
+    private string[] currentRoomName;
+
+    private void Awake()
+    {
+        InitVR(PCVRSetting.isVR);
+    }
+
+    private void InitVR(bool isVR)
+    {
+        if (isVR)
+        {
+            roomNameInput = vrRoomNameInput;
+            passwordInput = vrPasswordInput;
+            passwordCheckInput = vrPasswordCheckInput;
+            privateRoomToggle = vrPrivateRoomToggle;
+            cellBtn = vrCellBtn;
+            PreviousBtn = vrPreviousBtn;
+            NextBtn = vrNextBtn;
+            passwordInputPanel = vrPasswordInputPanel;
+        }
+        else
+        {
+            roomNameInput = pcRoomNameInput;
+            passwordInput = pcPasswordInput;
+            passwordCheckInput = pcPasswordCheckInput;
+            privateRoomToggle = pcPrivateRoomToggle;
+            cellBtn = pcCellBtn;
+            PreviousBtn = pcPreviousBtn;
+            NextBtn = pcNextBtn;
+            passwordInputPanel = pcPasswordInputPanel;
+        }
+    }
 
     /// <summary>
     /// 방 생성
@@ -39,7 +78,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         if (privateRoomToggle.isOn == true) // 만약 비공개 방이라면
         {
-            if (passwordInput.text == string.Empty) 
+            if (passwordInput.text == string.Empty)
             {
                 // 비밀번호가 입력되지 않았으면 방생성 X
                 Debug.Log("비밀번호가 입력되지 않았습니다.");
@@ -50,7 +89,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             PhotonNetwork.CreateRoom(roomNameInput.text == string.Empty ? $"Room{Random.Range(0, 100)}_" : $"{roomNameInput.text}_{passwordInput.text}", roomOptions);
             privateRoomToggle.isOn = false;
         }
-        else  
+        else
         {
             roomOptions.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable { { "private", false } };
             roomOptions.CustomRoomPropertiesForLobby = new string[] { "private" }; // 여기에 키 값을 등록해야, 필터링이 가능하다.
@@ -63,7 +102,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2; // 인원 지정.
-        roomOptions.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "private", false } }; 
+        roomOptions.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "private", false } };
         roomOptions.CustomRoomPropertiesForLobby = new string[] { "private" }; // 여기에 키 값을 등록해야, 필터링이 가능하다.      
 
         // 방 참가를 시도하고, 실패하면 생성해서 참가함.
@@ -133,7 +172,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             cellBtn[i].interactable = (multiple + i < myList.Count) ? true : false;
             cellBtn[i].transform.GetChild(0).GetComponent<TMP_Text>().text = roomName[0];
             cellBtn[i].transform.GetChild(1).GetComponent<TMP_Text>().text = (multiple + i < myList.Count) ? myList[multiple + i].PlayerCount + "/" + myList[multiple + i].MaxPlayers : "";
-            
+
             // 방이 비공개라면 자물쇠 이미지 활성화
             if (multiple + i < myList.Count)
             {
