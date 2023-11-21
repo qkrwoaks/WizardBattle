@@ -7,11 +7,19 @@ public class SkillCoolTimeUI : MonoBehaviour
     [SerializeField] private Image[] skillIconImg;
     [SerializeField] private Image playerImg;
     [SerializeField] private Image playerImgT;      // 테두리 이미지
-    
+
     private float[] time_start = { 0, 0 };
-    public bool[] isEnded = {true, true};
+    public bool[] isEnded = { true, true };
 
     private SkillController skillController;
+
+    private void Awake()
+    {
+        if (PCVRSetting.isVR)
+        {
+            GameSystem.Instance.skillCoolTimeUI = this;
+        }
+    }
 
     void Update()
     {

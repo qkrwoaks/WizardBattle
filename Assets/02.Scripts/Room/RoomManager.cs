@@ -7,21 +7,59 @@ using UnityEngine.UI;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     [Header("Room UI")]
-    [SerializeField]
     private GameObject roomPanel;
+    [SerializeField] private GameObject pcRoomPanel;
+    [SerializeField] private GameObject vrRoomPanel;
 
-    [SerializeField]
     private GameObject[] playerList;
-    private TMP_Text[] playerListText;  
+    [SerializeField] private GameObject[] pcPlayerList;
+    [SerializeField] private GameObject[] vrPlayerList;
+    private TMP_Text[] playerListText;
 
-    [SerializeField]
     private TMP_Text roomNameText;
-    [SerializeField]
+    [SerializeField] private TMP_Text pcRoomNameText;
+    [SerializeField] private TMP_Text vrRoomNameText;
+
     private Button startBnt;
+    [SerializeField] private Button pcStartBnt;
+    [SerializeField] private Button vrStartBnt;
+
+    bool isVR;
+
+    private void Awake()
+    {
+        isVR = PCVRSetting.isVR;
+        InitVR(isVR);
+    }
+
+    private void InitVR(bool isVR)
+    {
+        if (isVR)
+        {
+            roomPanel = vrRoomPanel;
+            playerList = vrPlayerList;
+            roomNameText = vrRoomNameText;
+            startBnt = vrStartBnt;
+        }
+        else
+        {
+            roomPanel = pcRoomPanel;
+            playerList = pcPlayerList;
+            roomNameText = pcRoomNameText;
+            startBnt = pcStartBnt;
+        }
+    }
 
     private void Start()
     {
-        PhotonNetwork.Instantiate("RoomPlayer", Vector3.zero, Quaternion.identity);
+        if (isVR)
+        {
+            PhotonNetwork.Instantiate("VRRoomPlayer", Vector3.zero, Quaternion.identity);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate("RoomPlayer", Vector3.zero, Quaternion.identity);
+        }
 
         playerListText = new TMP_Text[playerList.Length];
 

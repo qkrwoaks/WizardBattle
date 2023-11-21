@@ -22,34 +22,60 @@ public class GameSystem : Singleton<GameSystem>
     [Header("UI")]
     [SerializeField]
     private GameObject battleUICanvas;
-    [SerializeField]
     public SkillCoolTimeUI skillCoolTimeUI;
     [SerializeField]
     public OutcomeUIController outcomeUIController;
     [SerializeField]
     private GameObject wizzardChoosePlace;
-    [SerializeField]
     private GameObject skillCanvas;
-    [SerializeField]
+    [SerializeField] private GameObject pcSkillCanvas;
+    [SerializeField] private GameObject vrSkillCanvas;
     public SkillChooseController skillChooseController;
     [SerializeField]
     private Image bloodScreen;
-    [SerializeField]
     private GameObject waitingPanel;
+    [SerializeField] private GameObject pcWaitingPanel;
+    [SerializeField] private GameObject vrWaitingPanel;
 
     [Space(10f)]
     [SerializeField]
     private Transform[] spawnPoint;
-    [SerializeField]
     private GameObject skillSelectCamera;
+    [SerializeField] private GameObject pcSkillSelectCamera;
+    [SerializeField] private GameObject vrSkillSelectCamera;
 
-    [SerializeField]
     public GameObject[] playerModels;
+    [SerializeField] private GameObject[] pcPlayerModels;
+    [SerializeField] private GameObject[] vrPlayerModels;
+
+    public override void Awake()
+    {
+        base.Awake();
+        InitVR(PCVRSetting.isVR);
+    }
 
     private void Start()
     {
         wizzardChoosePlace.SetActive(true);
         skillCanvas.SetActive(true);
+    }
+
+    private void InitVR(bool isVR)
+    {
+        if (isVR)
+        {
+            skillCanvas = vrSkillCanvas;
+            waitingPanel = vrWaitingPanel;
+            skillSelectCamera = vrSkillSelectCamera;
+            playerModels = vrPlayerModels;
+        }
+        else
+        {
+            skillCanvas = pcSkillCanvas;
+            waitingPanel = pcWaitingPanel;
+            skillSelectCamera = pcSkillSelectCamera;
+            playerModels = pcPlayerModels;
+        }
     }
 
     public void Ready()
@@ -72,13 +98,9 @@ public class GameSystem : Singleton<GameSystem>
         {
             if (PhotonNetwork.NickName == PhotonNetwork.PlayerList[i].NickName)
             {
-                // VR
-                //PhotonNetwork.Instantiate("VRPlayer", spawnPoint[i].position, Quaternion.identity);
-
-                // PC
                 string playerModelName = playerModels[(int)skillChooseController.MyType].name;
-                Debug.Log(playerModelName);
-                GameObject _player = PhotonNetwork.Instantiate(playerModelName, spawnPoint[i].position, Quaternion.identity); ;
+
+                GameObject _player = PhotonNetwork.Instantiate(playerModelName, spawnPoint[i].position, Quaternion.identity);
                 PlayerManager playerManager = _player.GetComponent<PlayerManager>();
 
                 for (int j = 0; j < playerManager.skillController.skill.Length; j++)

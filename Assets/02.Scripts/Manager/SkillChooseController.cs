@@ -25,30 +25,44 @@ public class SkillChooseController : MonoBehaviour
 
     [Header("Wizzard")]
     [SerializeField] GameObject[] wizzardObjects;       //UI에 보여질 마법사 오브젝트 배열
-    [SerializeField] Button wizzardChooseBtnRight;         //마법사를 선택할 수 있는 버튼들 (왼쪽, 오른쪽)
-    [SerializeField] Button wizzardChooseBtnLeft;         //마법사를 선택할 수 있는 버튼들 (왼쪽, 오른쪽)
+    Button wizzardChooseBtnRight;         //마법사를 선택할 수 있는 버튼들 (왼쪽, 오른쪽)
+    [SerializeField] private Button pcWizzardChooseBtnRight;
+    [SerializeField] private Button vrWizzardChooseBtnRight;
+    Button wizzardChooseBtnLeft;         //마법사를 선택할 수 있는 버튼들 (왼쪽, 오른쪽)
+    [SerializeField] Button pcWizzardChooseBtnLeft;
+    [SerializeField] Button vrWizzardChooseBtnLeft;
     [SerializeField] private int currentWizzardIndex = 0;                //현재 마법사를 나타내는 인덱스    
     public WizardType MyType;
     [SerializeField] List<SkillData> passiveSkillDatas = new List<SkillData>();
-    [SerializeField] GameObject[] skillPanel;     //속성별  + 마지막 인덱스는 궁극기.
-    [SerializeField] GameObject ultimateSkillPanel;     //궁극기 
+    GameObject[] skillPanel;     //속성별  + 마지막 인덱스는 궁극기.
+    [SerializeField] GameObject[] pcSkillPanel;
+    [SerializeField] GameObject[] vrSkillPanel;
 
     public SelectedSkills currentSelectedSkills;
 
     [Header("Selected UI")]
-    [SerializeField] Image passiveImg;
-    [SerializeField] Image[] selectedSkillImgs;
-    [SerializeField] Image uitmateImg;
+    Image passiveImg;
+    [SerializeField] Image pcPassiveImg;
+    [SerializeField] Image vrPassiveImg;
+    Image[] selectedSkillImgs;
+    [SerializeField] Image[] pcSelectedSkillImgs;
+    [SerializeField] Image[] vrSelectedSkillImgs;
+    Image uitmateImg;
+    [SerializeField] Image pcUitmateImg;
+    [SerializeField] Image vrUitmateImg;
     [SerializeField] Sprite notSelectedImg;
     private int maxSkillCount = 2;
 
-    [SerializeField] TMP_Text warningText;         //스킬 미 선택시 경고 글자
+    TMP_Text warningText;         //스킬 미 선택시 경고 글자
+    [SerializeField] TMP_Text pcWarningText;         //스킬 미 선택시 경고 글자
+    [SerializeField] TMP_Text vrWarningText;         //스킬 미 선택시 경고 글자
 
     private bool isReady = false;
 
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
+        InitVR(PCVRSetting.isVR);
     }
 
     void Start()
@@ -57,6 +71,30 @@ public class SkillChooseController : MonoBehaviour
 
         SetUI();
         SetWizzardObject();
+    }
+
+    private void InitVR(bool isVR)
+    {
+        if (isVR)
+        {
+            wizzardChooseBtnRight = vrWizzardChooseBtnRight;
+            wizzardChooseBtnLeft = vrWizzardChooseBtnLeft;
+            skillPanel = vrSkillPanel;
+            passiveImg = vrPassiveImg;
+            selectedSkillImgs = vrSelectedSkillImgs;
+            uitmateImg = vrUitmateImg;
+            warningText = vrWarningText;
+        }
+        else
+        {
+            wizzardChooseBtnRight = pcWizzardChooseBtnRight;
+            wizzardChooseBtnLeft = pcWizzardChooseBtnLeft;
+            skillPanel = pcSkillPanel;
+            passiveImg = pcPassiveImg;
+            selectedSkillImgs = pcSelectedSkillImgs;
+            uitmateImg = pcUitmateImg;
+            warningText = pcWarningText;
+        }
     }
 
     /// <summary>
@@ -87,9 +125,9 @@ public class SkillChooseController : MonoBehaviour
         currentWizzardIndex += index;
 
         if (wizzardObjects.Length <= currentWizzardIndex) { currentWizzardIndex = 0; }
-        else if(currentWizzardIndex < 0) currentWizzardIndex = wizzardObjects.Length - 1;
+        else if (currentWizzardIndex < 0) currentWizzardIndex = wizzardObjects.Length - 1;
 
-        if(currentSelectedSkills.selectedSkills != null)
+        if (currentSelectedSkills.selectedSkills != null)
         {
             //스킬 초기화
             for (int i = 0; i < currentSelectedSkills.selectedSkills.Count; i++)
@@ -217,7 +255,7 @@ public class SkillChooseController : MonoBehaviour
             }
             else
             {
-                PV.RPC("GameStartRPC", RpcTarget.All);  
+                PV.RPC("GameStartRPC", RpcTarget.All);
             }
         }
     }
