@@ -1,12 +1,26 @@
 using Photon.Pun;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OutcomeUIController : MonoBehaviour
 {
     [SerializeField] GameObject[] outcomePanel;         // 0: Win / 1: Lose
     [SerializeField] GameObject particle;
     [SerializeField] float waitTimer;
+
+    [SerializeField] private Image bloodScreen;
+
+    [SerializeField] private PhotonView PV;
+
+    private void Awake()
+    {
+        if (PCVRSetting.isVR && PV.IsMine)
+        {
+            GameSystem.Instance.outcomeUIController = this;
+            GameSystem.Instance.bloodScreen = bloodScreen;
+        }
+    }
 
     /// <summary>
     /// 이기고 짐에 따라서 다른 UI Panel 보이기

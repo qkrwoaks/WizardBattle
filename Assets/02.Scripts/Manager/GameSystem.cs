@@ -32,7 +32,7 @@ public class GameSystem : Singleton<GameSystem>
     [SerializeField] private GameObject vrSkillCanvas;
     public SkillChooseController skillChooseController;
     [SerializeField]
-    private Image bloodScreen;
+    public Image bloodScreen;
     private GameObject waitingPanel;
     [SerializeField] private GameObject pcWaitingPanel;
     [SerializeField] private GameObject vrWaitingPanel;
