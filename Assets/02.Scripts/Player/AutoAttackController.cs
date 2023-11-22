@@ -7,6 +7,8 @@ public class AutoAttackController : MonoBehaviour
 
     [SerializeField] float timer;
 
+    [SerializeField] private Camera playerCamera;
+
     void Update()
     {
         if (GameSystem.Instance.playerManager.PV.IsMine == true)
@@ -25,9 +27,17 @@ public class AutoAttackController : MonoBehaviour
             timer = 0f;
         }
     }
+    public void VRFireCheck()
+    {
+        if (GameSystem.Instance.playerManager.PV.IsMine == true && timer >= GameSystem.Instance.playerManager.attackSpeed)
+        {
+            Fire();
+            timer = 0f;
+        }
+    }
 
     private void Fire()
     {
-        PhotonNetwork.Instantiate("AutoAttack\\" + autoAttackPrefab.name, Camera.main.transform.position, Quaternion.identity);
+        PhotonNetwork.Instantiate("AutoAttack\\" + autoAttackPrefab.name, GameSystem.Instance.playerManager.weaponTr.position, Quaternion.identity);
     }
 }

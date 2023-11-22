@@ -17,9 +17,5 @@ public class PlatformSetting : MonoBehaviour
 
 public class PCVRSetting
 {
-#if UNITY_EDITOR
     public static bool isVR = !XRSettings.isDeviceActive;
-#else
-    public static bool isVR = XRSettings.isDeviceActive;
-#endif
 }

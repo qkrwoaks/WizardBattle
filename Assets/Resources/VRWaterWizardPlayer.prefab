@@ -1967,6 +1967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoAttackPrefab: {fileID: 6603039417121433037, guid: 100d7174b12890947882d5eb253579fd, type: 3}
   timer: 0
+  playerCamera: {fileID: 0}
 --- !u!136 &152903224665831241
 CapsuleCollider:
   m_ObjectHideFlags: 0
