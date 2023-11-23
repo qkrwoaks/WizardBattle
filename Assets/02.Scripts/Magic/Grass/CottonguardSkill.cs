@@ -7,6 +7,8 @@ public class CottonguardSkill : Skill
     [SerializeField]
     private Transform playerTr;                         // 플레이어 Transform
 
+    private Transform weaponTr = GameSystem.Instance.plyerWeaponTr; 
+
     private Vector3 offset = new Vector3(0, 1.5f, 0);
 
     protected override void Start()
@@ -22,10 +24,10 @@ public class CottonguardSkill : Skill
 
     private IEnumerator StartSkill()
     {
-        offset += Camera.main.transform.forward;             // 플레이어가 바라보는 방향 더하기
+        offset += weaponTr.transform.forward;             // 플레이어가 바라보는 방향 더하기
 
         transform.position = playerTr.position + offset;
-        transform.rotation = Camera.main.transform.rotation; // 플레이어 방향으로 돌리기
+        transform.rotation = weaponTr.transform.rotation; // 플레이어 방향으로 돌리기
 
         PV.RPC("GodModeRPC", RpcTarget.All, true);
 

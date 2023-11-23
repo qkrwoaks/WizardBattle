@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  - {fileID: -944628639613478452, guid: 31dac49c6d9254b42b3d0210dcf488ae, type: 3}
+  - {fileID: -944628639613478452, guid: 474b1f05ce3b21e40b9689d030f8b8ba, type: 3}
 --- !u!114 &5107973139120131221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,7 +1221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoAttackPrefab: {fileID: 6603039417121433037, guid: 100d7174b12890947882d5eb253579fd, type: 3}
   timer: 0
-  playerCamera: {fileID: 4081936571160527235}
 --- !u!114 &4012981097101748748
 MonoBehaviour:
   m_ObjectHideFlags: 0

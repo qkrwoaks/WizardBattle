@@ -9,6 +9,8 @@ public class WaterBomb : Skill
 
     Vector3 offset;
 
+    private Transform weaponTr = GameSystem.Instance.plyerWeaponTr;
+
     public Transform Projectile;          //투사체
     private Transform myTransform;        //투사체 위치
 
@@ -16,8 +18,8 @@ public class WaterBomb : Skill
 
     protected override void Start()
     {
-        transform.rotation = Camera.main.transform.rotation;
-        target = Camera.main.transform.forward * 40;
+        transform.rotation = weaponTr.transform.rotation;
+        target = weaponTr.transform.forward * 40;
         myTransform = transform;
 
         base.Start();

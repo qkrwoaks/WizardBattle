@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: aeb56db1d99d04546ae962cc4ef9bee1, type: 2}
   PV: {fileID: 9208300047423590265}
-  skillController: {fileID: 0}
+  skillController: {fileID: 3104537662831236040}
   playerType: 0
   HP: 0
   shield: 0
@@ -235,11 +235,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isSolingAttack: 0
-  weaponTr: {fileID: 7599485301224169517}
+  weaponTr: {fileID: 6329379628723970432}
   playerModel:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3073841017748463588, guid: edb1eb1ed673d214b9d22f4baf6434a0, type: 3}
+  - {fileID: 188001288391116688, guid: b2d3a9335566fbd40b9c7c3340cd14bc, type: 3}
+  - {fileID: 1910656992697369809, guid: 552e154a29e78a74ca0bc142669ef52c, type: 3}
   hitSound: {fileID: 8300000, guid: 4ed8744c16891f749add22a6a4230008, type: 3}
 --- !u!114 &6329379627187401558
 MonoBehaviour:

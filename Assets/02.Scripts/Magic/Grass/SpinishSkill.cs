@@ -16,10 +16,13 @@ public class SpinishSkill : Skill
 
     [SerializeField] GameObject signPrefab;     //표식 프리팹 : 1차 맞았을 때 retationTime 만큼 표식이 생김
     [SerializeField] GameObject signObj;        // 표식 오브젝트
+
+    private Transform weaponTr = GameSystem.Instance.plyerWeaponTr;
+
     protected override void Start()
     {
         myTransform = transform;
-        transform.rotation = Camera.main.transform.rotation;
+        transform.rotation = weaponTr.transform.rotation;
         target = new Vector3(0, 0.0f, moveDistance);
 
         base.Start();

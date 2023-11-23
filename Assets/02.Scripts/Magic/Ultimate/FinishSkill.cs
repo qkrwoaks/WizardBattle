@@ -8,14 +8,17 @@ public class FinishSkill : Skill
 
     private float waitTime = 4f;
 
+    private Transform weaponTr;
+
     protected override void Start()
     {
         base.Start();
+        weaponTr = GameSystem.Instance.plyerWeaponTr;
     }
 
     protected override void UseSkill()
     {
-        transform.rotation = Camera.main.transform.rotation;
+        transform.rotation = weaponTr.transform.rotation;
 
         StartCoroutine(AttackCoroutine());
     }
@@ -25,7 +28,7 @@ public class FinishSkill : Skill
         transform.GetComponent<BoxCollider>().enabled = false;
 
         yield return new WaitForSeconds(waitTime);
-    
+
         transform.GetComponent<BoxCollider>().enabled = true;
 
         yield return new WaitForSeconds(_duration);

@@ -11,10 +11,12 @@ public class FireballSkill : Skill
 
     [SerializeField] float moveDistance = 1f;
 
+    private Transform weaponTr = GameSystem.Instance.plyerWeaponTr;
+
     protected override void Start()
     {
         myTransform = transform;
-        transform.rotation = Camera.main.transform.rotation;
+        transform.rotation = weaponTr.transform.rotation;
         target = new Vector3(0, 0.0f, moveDistance);
 
         base.Start();

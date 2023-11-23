@@ -13,8 +13,7 @@ public class FireLaserSkill : Skill
 
     protected override void Start()
     {
-        weaponTr = PV.IsMine ? GameSystem.Instance.plyerWeaponTr :
-            GameSystem.Instance.enemyWeaponTr;
+        weaponTr = PV.IsMine ? GameSystem.Instance.plyerWeaponTr : GameSystem.Instance.enemyWeaponTr;
 
         base.Start();
     }
@@ -38,7 +37,7 @@ public class FireLaserSkill : Skill
             current += Time.deltaTime;
 
             transform.position = weaponTr.position + offset;
-            transform.rotation = Camera.main.transform.rotation;
+            transform.rotation = weaponTr.transform.rotation;
 
             yield return new WaitForEndOfFrame();                          // 프레임 마다 대기
         }

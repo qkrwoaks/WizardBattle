@@ -13,7 +13,7 @@ public class FieldSkill : Skill
     [SerializeField] private float skillRange = 50;          // 최대 스킬 허용 범위
 
     private GameObject expectedRange;                        // 예상 범위 오브젝트
-    private Camera playerCamera;                             // 플레이어의 카메라
+    private Transform weaponTr;
 
     private RaycastHit rayHit;                               // 광선이 닿았을 때 실행되는 구조체
     private Ray ray;                                         // 예상 범위의 광선
@@ -40,7 +40,7 @@ public class FieldSkill : Skill
             return;
         }
 
-        playerCamera = Camera.main; // 플레이어 카메라 초기화
+        weaponTr = GameSystem.Instance.plyerWeaponTr; // 플레이어 카메라 초기화
         base.Start();               // 부모 클래스의 Start 호출
     }
 
@@ -62,8 +62,8 @@ public class FieldSkill : Skill
     {
         while (Input.GetMouseButton(0) == false)                                   // 마우스 왼쪽 버튼을 누르지 않았을 때 (차후 변경 가능)
         {
-            ray.origin = playerCamera.transform.position;                          // 광선 위치 초기화
-            ray.direction = playerCamera.transform.forward;                        // 광선 방향 초기화
+            ray.origin = weaponTr.transform.position;                          // 광선 위치 초기화
+            ray.direction = weaponTr.transform.forward;                        // 광선 방향 초기화
             if (Physics.Raycast(ray.origin, ray.direction, out rayHit, skillRange)) // 어떠한 물체가 광선에 닿았을 때
             {
                 ERTransform.position = rayHit.point + Vector3.up * 0.5f;                   // 예상 스킬 범위 오브젝트 위치 초기화

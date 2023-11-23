@@ -64,7 +64,7 @@ public class SkillController : MonoBehaviour
 
     private void UseSkill(string skillName)
     {
-        PhotonNetwork.Instantiate("Skill\\" + skillName, playerManager.weaponTr.GetChild(0).position, Quaternion.identity);
+        PhotonNetwork.Instantiate("Skill\\" + skillName, playerManager.weaponTr.position, Quaternion.identity);
     }
 
     public void FirstSkill()

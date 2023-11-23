@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9199450a0020df449abdbe2a47630304, type: 3}
   m_Name: GrassWizard
   m_EditorClassIdentifier: 
-  wizardType: 2
+  wizardType: 1
   wizardHp: 100
   wizardShield: 0
   wizardDp: 0

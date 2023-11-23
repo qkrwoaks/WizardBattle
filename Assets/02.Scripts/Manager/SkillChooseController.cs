@@ -15,8 +15,8 @@ public class SelectedSkills
 public enum WizardType
 {
     Fire = 0,
-    Water = 1,
-    Grass = 2
+    Grass = 1,
+    Water = 2,
 }
 
 public class SkillChooseController : MonoBehaviour

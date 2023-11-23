@@ -293,12 +293,12 @@ MonoBehaviour:
   playerModels: []
   pcPlayerModels:
   - {fileID: 6329379627187401556, guid: 7a590cb1cde38c54db5731344cc0bc98, type: 3}
-  - {fileID: 6329379627187401556, guid: 506340970f6693e4aad743e8d9a16284, type: 3}
   - {fileID: 6329379627187401556, guid: d7374c6734c8c0e4eafec158a0b48217, type: 3}
+  - {fileID: 6329379627187401556, guid: 506340970f6693e4aad743e8d9a16284, type: 3}
   vrPlayerModels:
   - {fileID: 713646178183850389, guid: 7a63d5f3aabce124db28e73d88689391, type: 3}
-  - {fileID: 2971762441183723687, guid: eb77c02a13d3f0544b4ad9570998d1ea, type: 3}
   - {fileID: 482601666874562781, guid: 8955f0869e776714ebb520aa6f3b7885, type: 3}
+  - {fileID: 2971762441183723687, guid: eb77c02a13d3f0544b4ad9570998d1ea, type: 3}
 --- !u!114 &105597319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,15 +3147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7240075037275974720, guid: 7e90d15769a95984aab7c326d1d3edaa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240075037275974720, guid: 7e90d15769a95984aab7c326d1d3edaa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240075037275974720, guid: 7e90d15769a95984aab7c326d1d3edaa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240075037275974720, guid: 7e90d15769a95984aab7c326d1d3edaa, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4665,8 +4665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wizzardObjects:
   - {fileID: 221134475}
-  - {fileID: 221134474}
   - {fileID: 221134473}
+  - {fileID: 221134474}
   pcWizzardChooseBtnRight: {fileID: 673606247}
   vrWizzardChooseBtnRight: {fileID: 551162388}
   pcWizzardChooseBtnLeft: {fileID: 673606246}
@@ -4675,17 +4675,17 @@ MonoBehaviour:
   MyType: 0
   passiveSkillDatas:
   - {fileID: 11400000, guid: 965f214b9c6bda241ba8dab732d8b62d, type: 2}
-  - {fileID: 11400000, guid: f7ed1491764c1ab47a03383e19007e71, type: 2}
   - {fileID: 11400000, guid: a59d77024e5ed8843b2b2de31be2b9dd, type: 2}
+  - {fileID: 11400000, guid: f7ed1491764c1ab47a03383e19007e71, type: 2}
   pcSkillPanel:
   - {fileID: 673606245}
-  - {fileID: 673606244}
   - {fileID: 673606243}
+  - {fileID: 673606244}
   - {fileID: 1292159135}
   vrSkillPanel:
   - {fileID: 551162386}
-  - {fileID: 551162385}
   - {fileID: 551162384}
+  - {fileID: 551162385}
   - {fileID: 1004474089}
   pcPassiveImg: {fileID: 673606242}
   vrPassiveImg: {fileID: 551162383}

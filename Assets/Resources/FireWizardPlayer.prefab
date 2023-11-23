@@ -401,11 +401,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isSolingAttack: 0
-  weaponTr: {fileID: 3690785787688299668}
+  weaponTr: {fileID: 6329379628723970432}
   playerModel:
-  - {fileID: 9042668547146019491}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3073841017748463588, guid: edb1eb1ed673d214b9d22f4baf6434a0, type: 3}
+  - {fileID: 1910656992697369809, guid: 552e154a29e78a74ca0bc142669ef52c, type: 3}
+  - {fileID: 188001288391116688, guid: b2d3a9335566fbd40b9c7c3340cd14bc, type: 3}
   hitSound: {fileID: 8300000, guid: 4ed8744c16891f749add22a6a4230008, type: 3}
 --- !u!114 &6329379627187401558
 MonoBehaviour:
@@ -537,7 +537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoAttackPrefab: {fileID: 6603039417121433037, guid: 100d7174b12890947882d5eb253579fd, type: 3}
   timer: 0
-  playerCamera: {fileID: 0}
 --- !u!1 &6329379628516224082
 GameObject:
   m_ObjectHideFlags: 0

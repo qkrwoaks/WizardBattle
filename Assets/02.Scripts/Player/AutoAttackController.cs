@@ -7,8 +7,6 @@ public class AutoAttackController : MonoBehaviour
 
     [SerializeField] float timer;
 
-    [SerializeField] private Camera playerCamera;
-
     void Update()
     {
         if (GameSystem.Instance.playerManager.PV.IsMine == true)
